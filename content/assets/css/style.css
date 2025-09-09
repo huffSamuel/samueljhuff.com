@@ -24,19 +24,39 @@ footer ul {
   gap: 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  article,
+  section > * {
+    max-width: 1048px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  article,
+  section > * {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    flex-direction: column-reverse;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   :root {
     --transition-time: 0s;
   }
 }
 
-@media (prefers-contrast:less) {
+@media (prefers-contrast: less) {
   :root {
     --color-bg: var(--color-bg0s);
   }
 }
 
-@media (prefers-contrast:more) {
+@media (prefers-contrast: more) {
   :root {
     --color-bg: var(--color-bg0h);
   }
