@@ -42,6 +42,10 @@ footer ul {
   footer {
     flex-direction: column-reverse;
   }
+
+  footer ul {
+    padding-inline-start: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
