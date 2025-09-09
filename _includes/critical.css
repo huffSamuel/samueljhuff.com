@@ -42,6 +42,13 @@
   box-sizing: border-box;
 }
 
+h1 {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 html {
   height: 100%;
   font-family: sans-serif;
