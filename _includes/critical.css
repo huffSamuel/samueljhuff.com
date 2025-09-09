@@ -1,0 +1,189 @@
+:root {
+  --transition-time: .2s;
+
+  --color-bg: var(--color-bg0);
+  --color-fg: var(--color-fg1);
+
+  --color-red: #cc241d;
+  --color-green: #98971a;
+  --color-yellow: #d79921;
+  --color-blue: #458588;
+  --color-purple: #b16286;
+  --color-aqua: #689d6a;
+  --color-gray: light-dark(#7c6f64, #a89984);
+
+  --color-gray1: #928374;
+  --color-red1: light-dark(#9d0006, #fb4934);
+  --color-green1: light-dark(#79740e, #b8bb26);
+  --color-yellow1: light-dark(#b57614, #fabd2f);
+  --color-blue1: light-dark(#076678, #83a598);
+  --color-purple1: light-dark(#8f3f71, #d3869b);
+  --color-aqua1: light-dark(#427b58, #8ec07c);
+
+  --color-bg0h: light-dark(#f9f5d7, #1d2021);
+  --color-bg0: light-dark(#fbf1c7, #282828);
+  --color-bg1: light-dark(#ebdbb2, #3c3836);
+  --color-bg2: light-dark(#d5c4a1, #504945);
+  --color-bg3: light-dark(#bdae93, #665c54);
+  --color-bg4: light-dark(#a89984, #7c6f64);
+  --color-gray2: #928374;
+  --color-orange: #d65d0e;
+
+  --color-bg0s: light-dark(#f2e5bc, #32302f);
+  --color-fg4: light-dark(#7c6f64, #a89984);
+  --color-fg3: light-dark(#665c54, #bdae93);
+  --color-fg2: light-dark(#504945, #d5c4a1);
+  --color-fg1: light-dark(#3c3836, #ebdbb2);
+  --color-fg0: light-dark(#282828, #fbf1c7);
+  --color-orange1: light-dark(#af3a03, #fe8019);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-size: 1rem;
+  color-scheme: light dark;
+}
+
+main {
+  min-height: 100vh;
+}
+
+main,
+body {
+  margin: 0;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  article,
+  section > * {
+    max-width: 1048px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  article,
+  section > * {
+    max-width: 80vw;
+  }
+}
+
+article,
+section > * {
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+section ul li {
+  margin-bottom: 2em;
+}
+
+section ul li p:first-child {
+  font-size: 1.1rem;
+  font-weight: 550;
+  padding-bottom: .5em;
+}
+
+section h2::first-letter {
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.25em;
+  line-height: 1.5;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+header {
+  border-bottom: 1px solid var(--color-bg1);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul {
+  padding-inline-start: 0;
+  list-style: none;
+  margin-block: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-start: .5em;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 1.25rem;
+}
+
+nav ul li.active {
+  border-bottom: 1px solid var(--color-green);
+}
+
+nav ul li:hover,
+nav ul li.active {
+  background-color: var(--color-bg1);
+}
+
+nav ul li:hover a,
+nav ul li.active a {
+  color: var(--color-fg0);
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: .5em 1.25em;
+  display: inline-block;
+  color: var(--color-fg);
+  background: none;
+}
+
+nav ul li a:hover {
+  background: none;
+}
+
+main article,
+main > section:first-child {
+  margin-top: 4em;
+}
+
+main section {
+  margin-top: 3em;
+}
+
+a {
+  color: var(--color-fg);
+  text-decoration: none;
+
+  background-image: linear-gradient(var(--color-yellow) 0 0);
+  transition: all var(--transition-time);
+  transition-property: background-size, color;
+  background-size: 100% .2em;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+a:hover {
+  background-size: 100% 100%;
+  color: var(--color-bg0);
+}

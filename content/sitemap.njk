@@ -1,0 +1,19 @@
+---
+eleventyExcludeFromCollections: true
+permalink: sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for item in collections.all %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <lastmod>{{ item.date | date("yyyy-MM-dd")}}</lastmod>
+    <changefreq>{{ item.data.sitemap.frequency | default("monthly") }}</changefreq>
+    <priority>{{ item.data.sitemap.priority | default(0.5) }}</priority>
+  </url>
+{% endfor %}
+</urlset>
+
+{# 0.8-1.0   Homepage, product information, landing pages, category pages #}
+{# 0.4-0.7   News articles, weather services, blog posts, pages that no site would be complete without #}
+{# 0.0-0.3.  FAQs, old news stories, old press releases, completely static pages that are still relevant #}

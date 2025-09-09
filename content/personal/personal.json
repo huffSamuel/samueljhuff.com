@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/blog.njk",
+    "tags": "personal",
+    "eleventyExcludeFromCollections": false
+}

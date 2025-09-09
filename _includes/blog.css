@@ -1,0 +1,16 @@
+h2 {
+    font-size: 2em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.article-published {
+    font-style: italic;
+    font-size: .8em;
+}
+
+article * {
+    max-width: 1048px;
+}

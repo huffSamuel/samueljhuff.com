@@ -1,0 +1,10 @@
+<header>
+    <nav>
+        <ul>
+            <li {% if page.url | length < 2 %}class="active"{%endif%}><a href="/"><span>samueljhuff.com</span></a></li>
+            <li {% if '/contact' in page.url %}class="active"{%endif%}><a href="/contact"></span>contact</span></a></li>
+            <li {% if '/archive' in page.url %}class="active"{%endif%}><a href="/archive"></span>archive</span></a></li>
+            <li><a href="https://buymeacoffee.com/samuel_huff"><span>buy me a coffee ☕️</span></a></li>
+        </ul>
+    </nav>
+</header>

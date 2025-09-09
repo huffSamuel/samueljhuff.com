@@ -1,0 +1,33 @@
+---
+title: Samuel Huff | Software Engineer
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="{{ description }}"/> {% set css %}
+    {% include "critical.css" %}
+    {% if critical %}
+      {% include critical %}
+    {% endif %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}</style>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+<link
+			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+			rel="stylesheet"
+		/>
+    {% include "favicons.njk" %}
+  </head>
+  <body>
+    {% include "header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+  </body>
+</html>

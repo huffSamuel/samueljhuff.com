@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/blog.njk",
+    "tags": "software",
+    "eleventyExcludeFromCollections": false
+}

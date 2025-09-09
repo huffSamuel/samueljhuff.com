@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+critical: 'form.css'
+sitemap:
+  frequency: yearly
+---
+
+<section>
+  <h2>Contact</h2>
+
+  <p>
+    Whether you have a question, a project idea, or just want to say hi, this
+    is the place to do it. Fill out the form below and I’ll get back to you as
+    soon as I can.
+  </p>
+
+  <form>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      name="name"
+      autocomplete="given-name"
+      required
+    />
+
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" autocomplete="email" required />
+
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      type="text"
+      name="message"
+      required
+      rows="8"
+    ></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>

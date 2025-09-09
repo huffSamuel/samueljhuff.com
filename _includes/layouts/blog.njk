@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+critical: blog.css
+date: 2025-09-08
+---
+
+<article>
+    <h2>{{ title }}</h2>
+{{ content | safe }}
+<p class="article-published">
+    Published <time>{{page.date | date('MMM dd yyyy')}}</time>
+</p>
+</article>

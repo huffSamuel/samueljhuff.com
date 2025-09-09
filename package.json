@@ -1,0 +1,30 @@
+{
+  "name": "site_eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
+    "browserslist": "^4.25.4",
+    "date-fns": "4.1.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "execa": "^9.6.0",
+    "lightningcss": "^1.30.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.9.2"
+  }
+}

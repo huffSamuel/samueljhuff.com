@@ -1,0 +1,43 @@
+footer {
+  min-height: 2rem;
+  border-top: 1px solid var(--color-bg1);
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+footer p {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+footer p {
+  margin-bottom: 1em;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-time: 0s;
+  }
+}
+
+@media (prefers-contrast:less) {
+  :root {
+    --color-bg: var(--color-bg0s);
+  }
+}
+
+@media (prefers-contrast:more) {
+  :root {
+    --color-bg: var(--color-bg0h);
+  }
+}
