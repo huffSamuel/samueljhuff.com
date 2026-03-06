@@ -24,16 +24,18 @@ footer ul {
   gap: 1rem;
 }
 
+main {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1000px) {
-  article,
-  section > * {
+  main {
     max-width: 1048px;
   }
 }
 
 @media screen and (max-width: 999px) {
-  article,
-  section > * {
+  main {
     max-width: 80vw;
   }
 }

@@ -1,5 +1,6 @@
 ---
 title: Hello, world!
+summary: The origin
 ---
 
 Hey 👋, I'm Sam. Any given day I embody a lot of different roles: Dad, husband, software engineer, shadetree mechanic, chef, chicken rancher. This blog is a digital repository of the things I've learned, failed to learn, or am working on learning.

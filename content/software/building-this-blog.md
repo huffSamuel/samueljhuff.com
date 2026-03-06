@@ -1,7 +1,8 @@
 ---
-title: building this blog
+title: Building this blog
 date: 2025-09-08
 templateEngineOverride: md
+summary: The process of building (and rebuilding) this website.
 ---
 
 I figured a fitting first real post for this blog would be to explain how I built it. I have tried, and failed, many times to actually start blogging and have used a variety of static site generators. I have finally settled on [Eleventy](https://www.11ty.dev/).

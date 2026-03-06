@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+critical: blog.css
+---
+
+<article>
+    <h2>{{ title }}</h2>
+    <p class="article-published">
+        Published
+        <time>{{ page.date | date('MMM dd yyyy') }}</time>
+        {{ lastmod }}
+    </p>
+
+    {% if yield %}
+        <p>
+            Makes {{ yield }}
+        </p>
+    {% endif %}
+    {% if oven_temp %}
+        <p>
+            Oven Temperature: {{ oven_temp.amount }} °{{ oven_temp.unit }}
+            <p>
+            {% endif %}
+            {% if ingredients %}
+                <h3>Ingredients</h3>
+                <ul>
+                    {% for ingredient in ingredients %}
+                        {% set name = ingredient | keys | first %}
+                        {% set data = ingredient[name] %}
+                        <li>
+                            {{ data.amount }}
+                            {{ data.unit }}
+                            {{ name }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if steps %}
+                <h3>Instructions</h3>
+                <ul style="list-style: none">
+                    {% for step in steps %}
+                        <li style="margin-bottom: 16px;">
+                            {{ step }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {{ content | safe }}
+        </article>

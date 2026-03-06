@@ -1,5 +1,6 @@
 h2 {
     font-size: 2em;
+    margin-bottom: 0;
 }
 
 .italic {
@@ -11,6 +12,18 @@ h2 {
     font-size: .8em;
 }
 
-article * {
-    max-width: 1048px;
+.filename {
+    padding-top: .25em;
+    padding-left: 1em;
+    width: 100%;
+    border-radius: 0.3em;
+    margin-bottom: -1em;
+    font-style: italic;
+    background: var(--color-bg-dark);
+    color: var(--color-gray1);
+}
+
+article pre[class*="language-"] {
+    overscroll-behavior-x: none;
+    background: var(--color-bg-dark);
 }

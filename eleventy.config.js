@@ -20,6 +20,10 @@ export default function (eleventyConfig) {
     return ray.filter(v => !filter.includes(v));
   });
 
+  eleventyConfig.addFilter('json', function(obj) {
+    return JSON.stringify(obj, null, 2);
+  });
+
   eleventyConfig.addFilter('preview', function (article) {
     return extractExcerpt(article);
   });
@@ -34,7 +38,13 @@ export default function (eleventyConfig) {
     }).code;
   });
   eleventyConfig.addFilter('date', function (date, dateFormat) {
-    return format(date, dateFormat);
+
+    try {
+      return format(date, dateFormat);
+    } catch (err) {
+      console.error('Failed to format date', err, date, dateFormat);
+      return '';
+    }
   });
 
   eleventyConfig.addPassthroughCopy('content/robots.txt');
@@ -42,8 +52,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('content/android-chrome*.png');
   eleventyConfig.addPassthroughCopy('content/apple-touch-icon*.png');
   eleventyConfig.addPassthroughCopy('content/assets');
-
-  // eleventyConfig.addPassthroughCopy('*.webmanifest');
 
   eleventyConfig.addPlugin(eleventyCss);
 
@@ -60,6 +68,12 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
+
+   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});
 
   eleventyConfig.addDateParsing(function (dateValue) {
     let localDate;

@@ -1,13 +1,19 @@
 ---
 layout: layouts/base.njk
 critical: blog.css
-date: 2025-09-08
 ---
+
+{% set isUpdated = updated != null %}
 
 <article>
     <h2>{{ title }}</h2>
-{{ content | safe }}
-<p class="article-published">
-    Published <time>{{page.date | date('MMM dd yyyy')}}</time>
-</p>
+    <p class="article-published">
+        Published
+        <time>{{ created | date('MMM dd yyyy') }}</time>
+        {% if isUpdated %}
+            | Last updated
+            <time>{{ updatedDate | date('MMM dd yyyy') }}</time>
+        {% endif %}
+    </p>
+    {{ content | safe }}
 </article>
