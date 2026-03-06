@@ -27,3 +27,7 @@ article pre[class*="language-"] {
     overscroll-behavior-x: none;
     background: var(--color-bg-dark);
 }
+
+article img {
+    max-width: 100%;
+}
