@@ -1,0 +1,101 @@
+header {
+  border-bottom: 2px solid var(--color-bg1);
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+header > * {
+  margin: 0 auto;
+}
+
+header > span {
+  width: 100%;
+  display: block;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+nav ul {
+  padding-inline-start: 0;
+  list-style: none;
+  margin-block: 0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-block-start: 0.5em;
+}
+
+header nav {
+  margin: 0 auto;
+  padding-bottom: -2px;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav li {
+  border-radius: 0.5em;
+  background-color: var(--color-bg1);
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+}
+
+header nav li:hover {
+  background-color: var(--color-bg2);
+}
+
+header nav li a::before {
+  content: '[';
+  padding: 0 2px;
+}
+
+header nav li a::after {
+  content: ']';
+  padding: 0 2px;
+}
+
+header nav li a::before,
+header nav li a::after {
+  visibility: hidden;
+  color: var(--color-blue1);
+}
+
+header nav li:not(.active) a:hover::before,
+header nav li:not(.active) a:hover::after {
+  visibility: visible;
+  color: var(--color-yellow1);
+}
+
+header nav li.active a::before,
+header nav li.active a::after {
+  visibility: visible;
+}
+
+/* nav ul li.active {
+  border-bottom: 1px solid var(--color-green);
+} */
+
+/* nav ul li:hover,
+nav ul li.active {
+  background-color: var(--color-bg3);
+} */
+
+nav ul li:hover a,
+nav ul li.active a {
+  color: var(--color-fg0);
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  display: inline-block;
+  color: var(--color-fg);
+  background: none;
+  display: block;
+  height: 100%;
+}
+
+nav ul li a:hover {
+  background: none;
+}
